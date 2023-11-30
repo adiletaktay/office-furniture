@@ -19,11 +19,13 @@ body {
 
 header {
     position: relative;
+    padding: 20px 0;
 }
 
 header .logo {
     font-weight: 600;
     font-size: 20px;
+    color: black;
 }
 
 header ul.nav {
@@ -117,8 +119,8 @@ header .shop-cart .summa {
     margin-bottom: 20px;
 }
 
-header .presentation {
-    margin: 50px 0;
+.wrapper .presentation {
+    margin: 30px 0;
     background: url(./img/divany.jpg) no-repeat;
     width: 100%;
     height: 500px;
@@ -129,7 +131,7 @@ header .presentation {
     position: relative;
 }
 
-header .presentation::after {
+.wrapper .presentation::after {
     content: 'Лучшие товары для вашего офиса';
     position: absolute;
     top: 100px;
@@ -140,7 +142,7 @@ header .presentation::after {
     color: #fff;
 }
 
-header .presentation::before {
+.wrapper .presentation::before {
     content: 'по низким ценам';
     position: absolute;
     top: 250px;
