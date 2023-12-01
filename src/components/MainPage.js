@@ -7,7 +7,6 @@ class MainPage extends React.Component {
   constructor(props) {
     super(props)
     this.state ={
-      orders: [],
       currentItems: [],
       items: [
         {
@@ -64,10 +63,10 @@ class MainPage extends React.Component {
     }
     this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
-    this.deleteOrder = this.deleteOrder.bind(this)
     this.chooseCategory = this.chooseCategory.bind(this)
     this.onShowItem = this.onShowItem.bind(this)
   }
+
   render() {
     return (
       <div>
@@ -96,18 +95,17 @@ class MainPage extends React.Component {
     })
   }
 
-  deleteOrder(id) {
-    this.setState({orders: this.state.orders.filter(el => el.id !==id)})
-  }
-
   addToOrder(item) {
+    const storageOrders = localStorage.getItem('orders')
+    const orders = JSON.parse(storageOrders) || []
+
     let isInArray = false
-    this.state.orders.forEach(el => {
+    orders.forEach(el => {
       if (el.id === item.id)
         isInArray = true
     })
     if (!isInArray)
-      this.setState({orders: [...this.state.orders, item]})
+      localStorage.setItem('orders', JSON.stringify([...orders, item]))
   }
 }
 

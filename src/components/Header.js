@@ -3,12 +3,22 @@ import { FaShoppingCart } from "react-icons/fa"
 import Order from './Order'
 import { Link, NavLink } from 'react-router-dom'
 
+const deleteOrder = (id) => {
+  const storageOrders = localStorage.getItem('orders')
+  const orders = JSON.parse(storageOrders) || []
+
+  localStorage.setItem('orders', JSON.stringify(orders.filter(el => el.id !==id)))
+}
+
 const showOrders = (props) => {
   let summa = 0
-  props.orders.forEach(el => summa +=Number.parseFloat(el.price))
+  const storageOrders = localStorage.getItem('orders')
+  const orders = JSON.parse(storageOrders) || []
+  orders.forEach(el => summa +=Number.parseFloat(el.price))
+
   return (<div>
-    {props.orders.map(el => (
-    <Order onDelete={props.onDelete} key={el.id} item={el} />
+    {orders.map(el => (
+    <Order onDelete={deleteOrder} key={el.id} item={el} />
   ))}
   <p className='summa'>Сумма: {new Intl.NumberFormat().format(summa)}$</p>
   </div>)
@@ -47,8 +57,10 @@ export default function Header(props) {
 
             {cartOpen && (
               <div className='shop-cart'>
-                {props?.orders?.length > 0 ? 
-                  showOrders(props) : showNothing()}
+                {
+                  localStorage.getItem('orders') && JSON.parse(localStorage.getItem('orders')).length > 0 ? 
+                    showOrders(props) : showNothing()
+                }
               </div>
             )}
         </div>
