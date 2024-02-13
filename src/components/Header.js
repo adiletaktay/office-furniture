@@ -36,9 +36,9 @@ export default function Header(props) {
   return (
     <>
       <header>
-        <div>
+        <div className='container'>
           <Link to="/" className='logo'>
-            <span >House staff</span>
+            <span >Office Furniture</span>
           </Link>
             <ul className='nav'>
               <li><NavLink 
@@ -68,4 +68,3 @@ export default function Header(props) {
     </>
   )
 }
-

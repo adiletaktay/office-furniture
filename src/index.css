@@ -13,13 +13,23 @@ body {
 }
 
 .wrapper {
-    width: 1280px;
+    max-width: 1280px;
     margin: 50px auto;
+    padding: 0 20px;
 }
 
 header {
     position: relative;
     padding: 20px 0;
+
+    @media (max-width: 40em) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px
+        }
+    }
 }
 
 header .logo {
@@ -31,6 +41,12 @@ header .logo {
 header ul.nav {
     float: right;
     list-style: none;
+}
+
+@media screen and (max-width: 40em) {
+    header ul.nav {
+        white-space: nowrap;
+    }
 }
 
 header ul.nav li {
@@ -136,7 +152,7 @@ header .shop-cart .summa {
     position: absolute;
     top: 100px;
     left: 50px;
-    width: 310px;
+    max-width: 310px;
     font-size: 40px;
     font-weight: 600;
     color: #fff;
@@ -147,10 +163,25 @@ header .shop-cart .summa {
     position: absolute;
     top: 250px;
     left: 50px;
-    width: 300px;
+    max-width: 300px;
     font-size: 15px;
     font-weight: 300;
     color: #fff;
+}
+
+
+@media screen and (max-width: 40em) {
+    .wrapper .presentation::after {
+        left: 30px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .wrapper .presentation::before {
+        left: 30px;
+        font-size: 15px;
+    }
 }
 
 .categories div {
@@ -195,6 +226,12 @@ main {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 40em) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 main .item {
@@ -204,6 +241,11 @@ main .item {
     overflow: hidden;
     position: relative;
     padding-bottom: 20px;
+
+    @media (max-width: 40em) {
+        width: 100%;
+        gap: 15px;
+    }
 }
 
 main .item img, .full-item img {
@@ -250,5 +292,5 @@ main .add-to-cart:hover,
 
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
