@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/office-furniture/static/css/main.6c0b2b46.css",
+    "main.js": "/office-furniture/static/js/main.9de509e5.js",
+    "static/media/divany.jpg": "/office-furniture/static/media/divany.18f3216c9cec6bd10cf9.jpg",
+    "index.html": "/office-furniture/index.html",
+    "main.6c0b2b46.css.map": "/office-furniture/static/css/main.6c0b2b46.css.map",
+    "main.9de509e5.js.map": "/office-furniture/static/js/main.9de509e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c0b2b46.css",
+    "static/js/main.9de509e5.js"
+  ]
+}
