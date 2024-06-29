@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/office-furniture/static/css/main.6c0b2b46.css",
-    "main.js": "/office-furniture/static/js/main.dcca5930.js",
+    "main.js": "/office-furniture/static/js/main.e2468819.js",
     "static/media/1.jpg": "/office-furniture/static/media/1.f0eaa15ea7ef783f2773.jpg",
     "static/media/7.jpg": "/office-furniture/static/media/7.afbcb47b9de0c8ac1bd3.jpg",
     "static/media/k2.jpg": "/office-furniture/static/media/k2.064e24ae80bc8ee5c7df.jpg",
@@ -10,10 +10,10 @@
     "static/media/426(1)-288x220w.jpg": "/office-furniture/static/media/426(1)-288x220w.035a2e177755cbe6195b.jpg",
     "index.html": "/office-furniture/index.html",
     "main.6c0b2b46.css.map": "/office-furniture/static/css/main.6c0b2b46.css.map",
-    "main.dcca5930.js.map": "/office-furniture/static/js/main.dcca5930.js.map"
+    "main.e2468819.js.map": "/office-furniture/static/js/main.e2468819.js.map"
   },
   "entrypoints": [
     "static/css/main.6c0b2b46.css",
-    "static/js/main.dcca5930.js"
+    "static/js/main.e2468819.js"
   ]
 }
