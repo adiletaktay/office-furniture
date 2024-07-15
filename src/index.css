@@ -153,12 +153,12 @@ header .shop-cart .summa {
 }
 
 .nav li a.active {
-  color: red; /* Цвет активной ссылки */
+  color: red;
 }
 
 .wrapper .presentation {
   margin: 30px 0;
-  background: url(./img/divany.jpg) no-repeat;
+  background: url(./img/sofas.jpg) no-repeat;
   width: 100%;
   height: 500px;
   background-size: cover;

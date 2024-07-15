@@ -11,7 +11,7 @@ interface OrderProps {
   onDelete: (id: number) => void
 }
 
-export class Order extends Component<OrderProps> {
+export default class Order extends Component<OrderProps> {
   render() {
     const { img, title, price } = this.props.item
 
@@ -25,5 +25,3 @@ export class Order extends Component<OrderProps> {
     )
   }
 }
-
-export default Order

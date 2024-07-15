@@ -1,11 +1,18 @@
-import React from "react"
+import React, { Suspense } from "react"
 import Footer from "./components/Footer"
 import { Routes, Route } from "react-router-dom"
-import { About } from "./components/About"
-import { Cabinet } from "./components/Cabinet"
-import { Contacts } from "./components/Contacts"
 import { MainPage } from "./components/MainPage"
-import MainLayout from "./components/MainLayout"
+import { MainLayout } from "./components/MainLayout"
+
+const About = React.lazy(() =>
+  import(/*webpackChunkName:"About"*/ "./components/About").then(({ About }) => ({ default: About })),
+)
+const Contacts = React.lazy(() =>
+  import(/*webpackChunkName:"Contacts"*/ "./components/Contacts").then(({ Contacts }) => ({ default: Contacts })),
+)
+const Cabinet = React.lazy(() =>
+  import(/*webpackChunkName:"Cabinet"*/ "./components/Cabinet").then(({ Cabinet }) => ({ default: Cabinet })),
+)
 
 class App extends React.Component {
   render() {
@@ -14,9 +21,30 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<MainPage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/cabinet" element={<Cabinet />} />
+            <Route
+              path="/about"
+              element={
+                <Suspense fallback={<div>Идёт загрузка...</div>}>
+                  <About />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <Suspense fallback={<div>Идёт загрузка...</div>}>
+                  <Contacts />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/cabinet"
+              element={
+                <Suspense fallback={<div>Идёт загрузка...</div>}>
+                  <Cabinet />
+                </Suspense>
+              }
+            />
           </Route>
         </Routes>
         <Footer />
@@ -24,5 +52,4 @@ class App extends React.Component {
     )
   }
 }
-
 export default App

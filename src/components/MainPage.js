@@ -3,7 +3,7 @@ import Items from "./Items"
 import Categories from "./Categories"
 import ShowFullItem from "./ShowFullItem"
 
-class MainPage extends React.Component {
+export class MainPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -12,7 +12,7 @@ class MainPage extends React.Component {
         {
           id: 1,
           title: "Стол директора",
-          img: require("../img/1.jpg"),
+          img: require("../img/executiveOffices.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "tables",
           price: "99.99",
@@ -20,7 +20,7 @@ class MainPage extends React.Component {
         {
           id: 2,
           title: "Стуль для офиса",
-          img: require("../img/k1.jpg"),
+          img: require("../img/armchair.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "chairs",
           price: "59.99",
@@ -28,7 +28,7 @@ class MainPage extends React.Component {
         {
           id: 3,
           title: "Мягкая мебель",
-          img: require("../img/426(1)-288x220w.jpg"),
+          img: require("../img/cushionedFurniture.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "sofa",
           price: "89.99",
@@ -36,7 +36,7 @@ class MainPage extends React.Component {
         {
           id: 4,
           title: "Офисное пространство",
-          img: require("../img/7.jpg"),
+          img: require("../img/tableChairs.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "office",
           price: "79.99",
@@ -44,7 +44,7 @@ class MainPage extends React.Component {
         {
           id: 5,
           title: "Стуль для приемной",
-          img: require("../img/k2.jpg"),
+          img: require("../img/chair.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "chairs",
           price: "49.99",
@@ -52,7 +52,7 @@ class MainPage extends React.Component {
         {
           id: 6,
           title: "Мебель для приемной",
-          img: require("../img/504(1)-288x220w.jpg"),
+          img: require("../img/reception.jpg"),
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "office",
           price: "69.99",
@@ -69,7 +69,7 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <div className="presentation"></div>
         <Categories chooseCategory={this.chooseCategory} />
         <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
@@ -77,7 +77,7 @@ class MainPage extends React.Component {
         {this.state.showFullItem && (
           <ShowFullItem onAdd={this.addToOrder} onShowItem={this.onShowItem} item={this.state.fullItem} />
         )}
-      </div>
+      </>
     )
   }
 
@@ -108,5 +108,3 @@ class MainPage extends React.Component {
     if (!isInArray) localStorage.setItem("orders", JSON.stringify([...orders, item]))
   }
 }
-
-export { MainPage }

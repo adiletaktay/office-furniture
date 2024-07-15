@@ -15,7 +15,7 @@ interface ItemsProps {
   onAdd: (item: { img: string; title: string; desc: string; price: number }) => void
 }
 
-export class Items extends Component<ItemsProps> {
+export default class Items extends Component<ItemsProps> {
   render() {
     return (
       <main>
@@ -26,5 +26,3 @@ export class Items extends Component<ItemsProps> {
     )
   }
 }
-
-export default Items

@@ -13,7 +13,7 @@ interface CategoriesState {
   categories: Category[]
 }
 
-export class Categories extends Component<CategoriesProps, CategoriesState> {
+export default class Categories extends Component<CategoriesProps, CategoriesState> {
   constructor(props: CategoriesProps) {
     super(props)
     this.state = {
@@ -53,5 +53,3 @@ export class Categories extends Component<CategoriesProps, CategoriesState> {
     )
   }
 }
-
-export default Categories
