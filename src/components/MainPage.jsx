@@ -1,6 +1,6 @@
 import React from "react"
-import Items from "./Items"
 import Categories from "./Categories"
+import Items from "./Items"
 import ShowFullItem from "./ShowFullItem"
 
 export class MainPage extends React.Component {
@@ -12,7 +12,7 @@ export class MainPage extends React.Component {
         {
           id: 1,
           title: "Стол директора",
-          img: require("../img/executiveOffices.jpg"),
+          img: "/img/executiveOffices.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "tables",
           price: "99.99",
@@ -20,7 +20,7 @@ export class MainPage extends React.Component {
         {
           id: 2,
           title: "Стуль для офиса",
-          img: require("../img/armchair.jpg"),
+          img: "/img/armchair.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "chairs",
           price: "59.99",
@@ -28,7 +28,7 @@ export class MainPage extends React.Component {
         {
           id: 3,
           title: "Мягкая мебель",
-          img: require("../img/cushionedFurniture.jpg"),
+          img: "/img/cushionedFurniture.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "sofa",
           price: "89.99",
@@ -36,7 +36,7 @@ export class MainPage extends React.Component {
         {
           id: 4,
           title: "Офисное пространство",
-          img: require("../img/tableChairs.jpg"),
+          img: "/img/tableChairs.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "office",
           price: "79.99",
@@ -44,7 +44,7 @@ export class MainPage extends React.Component {
         {
           id: 5,
           title: "Стуль для приемной",
-          img: require("../img/chair.jpg"),
+          img: "/img/chair.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "chairs",
           price: "49.99",
@@ -52,7 +52,7 @@ export class MainPage extends React.Component {
         {
           id: 6,
           title: "Мебель для приемной",
-          img: require("../img/reception.jpg"),
+          img: "/img/reception.jpg",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
           category: "office",
           price: "69.99",

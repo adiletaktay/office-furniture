@@ -1,18 +1,12 @@
 import React, { Suspense } from "react"
+import { Route, Routes } from "react-router-dom"
 import Footer from "./components/Footer"
-import { Routes, Route } from "react-router-dom"
-import { MainPage } from "./components/MainPage"
 import { MainLayout } from "./components/MainLayout"
+import { MainPage } from "./components/MainPage"
 
-const About = React.lazy(() =>
-  import(/*webpackChunkName:"About"*/ "./components/About").then(({ About }) => ({ default: About })),
-)
-const Contacts = React.lazy(() =>
-  import(/*webpackChunkName:"Contacts"*/ "./components/Contacts").then(({ Contacts }) => ({ default: Contacts })),
-)
-const Cabinet = React.lazy(() =>
-  import(/*webpackChunkName:"Cabinet"*/ "./components/Cabinet").then(({ Cabinet }) => ({ default: Cabinet })),
-)
+const About = React.lazy(() => import("./components/About").then(({ About }) => ({ default: About })))
+const Contacts = React.lazy(() => import("./components/Contacts").then(({ Contacts }) => ({ default: Contacts })))
+const Cabinet = React.lazy(() => import("./components/Cabinet").then(({ Cabinet }) => ({ default: Cabinet })))
 
 class App extends React.Component {
   render() {

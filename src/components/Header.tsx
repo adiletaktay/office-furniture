@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { FaShoppingCart } from "react-icons/fa"
 import { Link, useLocation } from "react-router-dom"
 import Order from "./Order"
@@ -42,7 +42,7 @@ const showNothing = (): JSX.Element => {
 }
 
 export const Header: React.FC = () => {
-  const [cartOpen, setCartOpen] = useState<boolean>(false)
+  const [cartOpen, setCartOpen] = React.useState<boolean>(false)
   const location = useLocation()
 
   return (
