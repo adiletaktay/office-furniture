@@ -17,7 +17,7 @@ export default class Item extends Component<ItemProps> {
 
     return (
       <div className="item">
-        <img src={img} alt={title} onClick={() => this.props.onShowItem(this.props.item)} />
+        <img src={img} alt={title} onClick={() => this.props.onShowItem(this.props.item)} loading="lazy" />
         <h2>{title}</h2>
         <p>{desc}</p>
         <b>{price}$</b>

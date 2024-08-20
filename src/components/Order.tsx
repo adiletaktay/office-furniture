@@ -17,7 +17,7 @@ export default class Order extends Component<OrderProps> {
 
     return (
       <div className="item">
-        <img src={img} alt={title} />
+        <img src={img} alt={title} loading="lazy" />
         <h2>{title}</h2>
         <b>{price}$</b>
         <FaTrash className="delete-icon" onClick={() => this.props.onDelete(this.props.item.id)} />
